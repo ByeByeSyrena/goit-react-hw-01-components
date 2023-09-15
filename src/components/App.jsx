@@ -1,16 +1,35 @@
+import { Profile } from "./Profile/Profile";
+import { Statistics } from "./Statistics/Statistics";
+
+import userJson from "../data/user.json";
+import statisticsJson from "../data/data.json";
+
+const statistics = statisticsJson;
+console.log(statistics);
+
+const { username, tag, location, avatar, stats } = userJson;
+const { followers, views, likes } = stats;
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Profile
+        username={username}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+        followers={followers}
+        views={views}
+        likes={likes}
+      />
+      
+      {statistics.map(stat => {
+      return (<Statistics
+        label={stat.label}
+        key={stat.id}
+        percentage={stat.percentage}
+      />)})}
+    </>
   );
 };
+
