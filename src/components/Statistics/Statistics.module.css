@@ -1,0 +1,42 @@
+.statistics {
+  display: block;
+  width: 1280px;
+  padding: 20px 20px;
+}
+
+.title {
+  display: block;
+  width: 320px;
+  margin: 0% auto;
+  padding: 15px;
+  color: azure;
+  background-color: black;
+  text-align: center;
+}
+
+.statList {
+  display: grid;
+  grid-template-columns: 70px 70px 70px 70px 70px;
+  justify-content: center;
+  gap: 0px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 50px;
+  padding: 5px;
+}
+
+.label {
+  display: block;
+  margin: 0% auto;
+  color: azure;
+}
+
+.percentage {
+  display: block;
+  margin: 0% auto;
+  color: azure;
+}

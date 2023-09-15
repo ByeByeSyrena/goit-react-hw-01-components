@@ -23,7 +23,6 @@ export const App = () => {
         likes={likes}
       />
       <Statistics
-        key={statistics.id}
         title="Upload stats"
         statistics={statistics} />
     </>

@@ -1,4 +1,6 @@
 import React from "react";
+import css from './Statistics.module.css';
+
 
 const generateRandomColor = () => {
   const letters = "0123456789ABCDEF";
@@ -9,15 +11,15 @@ const generateRandomColor = () => {
   return color;
 };
 
-export const Statistics = ({ title, statistics }) => {
+export const Statistics = ({ title, statistics}) => {
   return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
-      <ul className="statList">
-        {statistics.map(({label, percentage}) => (
-          <li className="item" style={{ backgroundColor: generateRandomColor() }}>
-            <span className="label">{label}</span>
-            <span className="percentage">{percentage}%</span>
+    <section className={css.statistics}>
+      {title && <h2 className={css.title}>{title}</h2>}
+      <ul className={css.statList}>
+        {statistics.map(({label, percentage, id}) => (
+          <li className={css.item} key={id} style={{ backgroundColor: generateRandomColor() }}>
+            <span className={css.label}>{label}</span>
+            <span className={css.percentage}>{percentage}%</span>
           </li>
         ))}
       </ul>
