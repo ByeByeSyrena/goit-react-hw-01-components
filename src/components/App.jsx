@@ -22,13 +22,10 @@ export const App = () => {
         views={views}
         likes={likes}
       />
-      
-      {statistics.map(stat => {
-      return (<Statistics
-        label={stat.label}
-        key={stat.id}
-        percentage={stat.percentage}
-      />)})}
+      <Statistics
+        key={statistics.id}
+        title="Upload stats"
+        statistics={statistics} />
     </>
   );
 };
