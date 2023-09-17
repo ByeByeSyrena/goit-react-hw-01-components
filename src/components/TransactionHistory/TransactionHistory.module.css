@@ -1,0 +1,17 @@
+.row {
+  text-align: center;
+  height: 40px;
+  background-color: aliceblue;
+  color: gray;
+}
+
+.transactionHistory {
+  width: 60%;
+  margin: 0 auto 50px auto;
+}
+
+.headline {
+  text-align: center;
+  height: 40px;
+  background-color: aqua;
+}
