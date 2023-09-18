@@ -9,28 +9,3 @@
   color: darkblue;
   margin-bottom: 100px;
 }
-
-.item {
-  display: flex;
-  gap: 15px;
-  padding-left: 200px;
-  align-items: center;
-  width: 30%;
-  background-color: aliceblue;
-  box-shadow: inset;
-  min-height: 60px;
-}
-
-.status {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-}
-
-.green {
-  background-color: yellowgreen;
-}
-
-.red {
-  background-color: red;
-}

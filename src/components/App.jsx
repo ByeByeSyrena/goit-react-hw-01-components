@@ -11,10 +11,14 @@ import transactionsJson from "../data/transactions.json";
 
 const friends = friendsJson;
 const statistics = statisticsJson;
-const transactions = transactionsJson;
+
+const transactions = transactionsJson.map(transaction => ({
+  ...transaction,
+  amount: Number(transaction.amount),
+}));
 
 const { username, tag, location, avatar, stats } = userJson;
-const { followers, views, likes } = stats;
+
 
 export const App = () => {
   return (
@@ -24,9 +28,7 @@ export const App = () => {
         tag={tag}
         location={location}
         avatar={avatar}
-        followers={followers}
-        views={views}
-        likes={likes}
+        stats={stats}
       />
       <Statistics
         title="Upload stats"
